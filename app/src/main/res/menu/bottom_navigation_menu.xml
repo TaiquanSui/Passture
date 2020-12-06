@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/page_overview"
+        android:enabled="true"
+        android:icon="@drawable/overview"
+        android:title="overview"/>
+    <item
+        android:id="@+id/page_detail"
+        android:enabled="true"
+        android:icon="@drawable/calendar"
+        android:title="day"/>
+    <item
+        android:id="@+id/page_profile"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="profile"/>
+
+</menu>

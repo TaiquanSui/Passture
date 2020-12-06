@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "266910492845",
+    "project_id": "pastrue-f214c",
+    "storage_bucket": "pastrue-f214c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:266910492845:android:416119e1490a710d6ebe24",
+        "android_client_info": {
+          "package_name": "com.example.pasture"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "266910492845-d2jh09glaiipjv3f7qpcv5341kb6nchl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pasture",
+            "certificate_hash": "c50f5e7ea860feaba1b9da404d2bac40c8058cc4"
+          }
+        },
+        {
+          "client_id": "266910492845-t5f21vp81bbhlp1q94rm022bg8kdv222.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbPMxoU0-Q1f25WDUaIj7g2cu54QIlYmc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "266910492845-t5f21vp81bbhlp1q94rm022bg8kdv222.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

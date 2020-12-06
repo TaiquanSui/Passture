@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="navigation_bar">
+        <item name="enforceTextAppearance">true</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="android:background">#45aaf2</item>
+        <item name="itemIconTint">@color/mtrl_bottom_nav_colored_item_tint</item>
+        <item name="itemRippleColor">@color/mtrl_bottom_nav_colored_ripple_color</item>
+        <item name="itemTextAppearanceInactive">?attr/textAppearanceCaption</item>
+        <item name="itemTextAppearanceActive">?attr/textAppearanceCaption</item>
+        <item name="itemTextColor">@color/mtrl_bottom_nav_colored_item_tint</item>
+    </style>
+</resources>
