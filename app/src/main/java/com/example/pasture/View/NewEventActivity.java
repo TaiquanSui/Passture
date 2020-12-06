@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
@@ -51,6 +52,7 @@ public class NewEventActivity extends AppCompatActivity {
                 setEndTime();
             }
         });
+
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,9 +97,24 @@ public class NewEventActivity extends AppCompatActivity {
     }
 
     private void createNewEvent() {
-        System.out.println("createNewEvents+++++++++++++++++++++++++++++++++++++++++++");
 
-        viewModel.createNewEvent(dateTV.getText().toString(), titleET.getText().toString(), startTimeTV.getText().toString(), endTimeTV.getText().toString(), descriptionET.getText().toString());
+        String date = dateTV.getText().toString();
+        String title = titleET.getText().toString();
+        String startTime = startTimeTV.getText().toString();
+        String endTime = endTimeTV.getText().toString();
+        String description = descriptionET.getText().toString();
+
+        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&"+date+"&&&&&&&&&&&&&&&&&&&&&&&&&&&"+title+"&&&&&&&&&&&&&&&&&&&&&&&&&&&"+startTime+"&&&&&&&&&&&&&&&&&&&&&&&&&&&"+
+                endTime+"&&&&&&&&&&&&&&&&&&&&&&&&&&&"+description);
+
+        if(date==null || title==null || startTime==null || endTime==null || description==null){
+            Toast.makeText(this,"Please fill all the field",Toast.LENGTH_LONG);
+        }else {
+            viewModel.createNewEvent(date, title, startTime, endTime, description);
+            finish();
+        }
+
+
     }
 
 

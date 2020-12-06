@@ -86,7 +86,7 @@ public class OverviewFragment extends Fragment {
     }
 
 
-    OverViewAdapter adapter;
+    private OverViewAdapter adapter;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -1,5 +1,6 @@
 package com.example.pasture.View;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,8 +8,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.pasture.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +32,12 @@ public class ProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private View view;
+    private FirebaseUser user;
+    private ImageView userImage;
+    private TextView userDisplayedName;
+    private Button logoutButton;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -61,6 +74,33 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        view = inflater.inflate(R.layout.fragment_profile, container, false);
+
+         user = FirebaseAuth.getInstance().getCurrentUser();
+         userImage = view.findViewById(R.id.userImage);
+         userDisplayedName = view.findViewById(R.id.userAccount);
+         logoutButton = view.findViewById(R.id.logoutButton);
+
+         Picasso.get().load(user.getPhotoUrl())
+                .into(userImage);
+         userDisplayedName.setText(user.getDisplayName());
+
+         logoutButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 logout();
+             }
+         });
+
+        return view;
     }
+
+    private void logout(){
+        FirebaseAuth.getInstance().signOut();
+        System.out.println("wdsjifjsdaghfdioshgfidops"+"*^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&^&");
+        Intent intent = new Intent(view.getContext(), LoginActivity.class);
+        startActivity(intent);
+    }
+
+
 }

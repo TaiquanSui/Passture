@@ -35,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         profileFragment = new ProfileFragment();
 
         getFragment(overviewFragment);
+
         actionButton = findViewById(R.id.fab);
+        actionButton.setImageResource(R.drawable.add);
         actionButton.setVisibility(View.VISIBLE);
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
